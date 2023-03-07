@@ -55,9 +55,7 @@
            <button type="submit" class="btn btn-danger" value="Delete">
            <i class="fas fa-solid fa-trash"></i>
            Delete
-           </button>
-           
-           
+           </button>              
           </form>
             </td>
          </tr>
@@ -69,7 +67,13 @@
         @endforelse
       </table>
     </div>
-    <!-- /.card-body -->
+
+            <div class="card-footer">
+              <a href="/dashboard/admin" class="btn btn-warning">
+                <i class=" fas fa-solid fa-arrow-left"></i>
+                Back To Dashboard
+              </a>
+            </div>
   
 @endsection
 

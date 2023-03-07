@@ -1,10 +1,10 @@
 @extends('template.master')
 
 @section('judul')
- <h1> Halaman Paket </h1>
+    <h1>Ini Halaman Index Paket</h1>
 @endsection
 
-@section('content')    
+@section('content')
 <div class="card">
     <div class="card-header">
     <div class="card-tools">
@@ -15,19 +15,19 @@
               <i class="fas fa-times"></i>
             </button>
           </div>
-      <h3 class="card-title">Data Paket</h3>
+      <h3 class="card-title"></h3>
     </div>
     <!-- /.card-header -->
     <div class="card-body">
     <a href="paket/create" class="btn btn-info mb-3">
-          <i class="fas fa-plus"></i>
+    <i class="fas fa-plus"></i>
            Create
         </a>
       <table id="example2" class="table table-bordered table-hover">
         <thead>
         <tr>
           <th>No</th>
-          <th>Nama Outlet</th>
+          <th>Outlet Id</th>
           <th>Jenis</th>
           <th>Nama Paket</th>
           <th>Harga</th>
@@ -44,21 +44,11 @@
           <td>{{ $paket->harga }}</td>
           <td>
           <form action="{{ route ('paket.destroy', [$paket->id])}}" method="POST">
-              <a class="btn btn-info mr-3" href="paket/{{$paket->id}}">
-                <i class="fas fa-info-circle"></i>
-                Detail
-              </a>
-              <a class="btn btn-warning mr-3" href="paket/{{$paket->id}}/edit">
-              <i class="far fa-edit"></i> 
-              Edit
-              </a>
+              <a class="btn btn-info mr-3" href="paket/{{$paket->id}}">Detail</a>
+              <a class="btn btn-warning mr-3" href="paket/{{$paket->id}}/edit">Edit</a>
             @csrf
             @method('DELETE')
-            
-           <button type="submit" class="btn btn-danger" value="Delete">
-           <i class="fas fa-solid fa-trash"></i>
-            Delete
-           </button>
+           <input type="submit" class="btn btn-danger" value="Delete">
           </form>
             </td>
          </tr>

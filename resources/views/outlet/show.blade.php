@@ -37,7 +37,6 @@
                 <i class="nav-icon fas fa-solid fa-arrow-left"></i>
                 Kembali
               </a>
-
                 </div>
               </form>
             </div>

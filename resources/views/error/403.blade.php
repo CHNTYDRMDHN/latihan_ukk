@@ -40,8 +40,6 @@
         </div>
         <!-- /.error-content -->
       </div>
-      <!-- /.error-page -->
     </section>
-    <!-- /.content -->
   </div>
   @endsection

@@ -33,9 +33,25 @@ class DetailTransaksiController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request, $transaksi)
     {
         //
+        $request->validate([
+            'id_paket'  => 'required',
+            'qty'       => 'required'
+        ],
+        [
+            'id_paket.required' => 'Pilih Paket',
+            'qty.required'      => 'Isi Qty'
+        ]);
+
+        $detailTransaksi = new DetailTransaksi;
+        $detailTransaksi->transaksi_id  = $transaksi;
+        $detailTransaksi->paket_id      = $request->id_paket;
+        $detailTransaksi->qty           = $request->qty;
+        $detailTransaksi->save();
+
+        return redirect()->route('transaksi.proses', $transaksi);
     }
 
     /**
@@ -58,6 +74,7 @@ class DetailTransaksiController extends Controller
     public function edit(Detail_transaksi $detail_transaksi)
     {
         //
+        
     }
 
     /**

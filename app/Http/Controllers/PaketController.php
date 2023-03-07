@@ -44,16 +44,16 @@ class PaketController extends Controller
     {
         //
         $request->validate([
-            'outlet_id' => 'required',
-            'jenis' => 'required',
+            'outlet_id'  => 'required',
+            'jenis'      => 'required',
             'nama_paket' => 'required',
-            'harga' => 'required',
+            'harga'      => 'required',
         ]);
         Paket::create([
-            'outlet_id' =>$request->outlet_id,
-            'jenis' =>$request->jenis,
+            'outlet_id'  =>$request->outlet_id,
+            'jenis'      =>$request->jenis,
             'nama_paket' =>$request->nama_paket,
-            'harga' =>$request->harga,
+            'harga'      =>$request->harga,
         ]);
         return redirect('/paket');
     }
@@ -96,15 +96,15 @@ class PaketController extends Controller
         //
         $request->validate([
             'outlet_id' => 'required',
-            'jenis' => 'required',
-            'nama_paket' => 'required',
-            'harga' => 'required',
+            'jenis'     => 'required',
+            'nama_paket'=> 'required',
+            'harga'     => 'required',
         ]);
         $paket = Paket::find($paket->id);
-        $paket->outlet_id = $request->outlet_id;
-        $paket->jenis = $request->jenis;
-        $paket->nama_paket = $request->nama_paket;
-        $paket->harga = $request->harga;
+        $paket->outlet_id   = $request->outlet_id;
+        $paket->jenis       = $request->jenis;
+        $paket->nama_paket  = $request->nama_paket;
+        $paket->harga       = $request->harga;
         $paket->update();
         return redirect('/paket');
     }

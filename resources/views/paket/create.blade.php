@@ -46,8 +46,6 @@
                     <label for="harga_awal">Harga</label>
                     <input type="text" name="harga" class="form-control" id="harga" placeholder="Masukan Harga Awal">
                   </div>
-                <!-- /.card-body -->
-
                 <div class="card-footer">
                   <button type="submit" class="btn btn-primary">Save</button>
                  <button type="reset" class="btn btn-primary"> Reset</button>
