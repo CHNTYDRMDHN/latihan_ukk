@@ -5,43 +5,16 @@
 @endsection
 
 @section('content')
-
-<div class="card card-primary card-outline">
-              <div class="from-body">
-                <div class="text-center">
-                  <img class="profile-user-img img-fluid img-circle"
-                       src="{{ asset('adminlte/dist/img/user4-128x128.jpg') }}"
-                       alt="User profile picture">
-                </div>
-
-                <h3 class="profile-username text-center">Chintya Dwi Ramadhani</h3>
-
-                <p class="text-muted text-center">Software Enginering</p>
-
-                <ul class="list-group list-group-unbordered mb-3">
-                  <li class="list-group-item">
-                    <b>Followers</b> <a class="float-right">1,322</a>
-                  </li>
-                  <li class="list-group-item">
-                    <b>Following</b> <a class="float-right">543</a>
-                  </li>
-                  <li class="list-group-item">
-                    <b>Friends</b> <a class="float-right">13,287</a>
-                  </li>
-                </ul>
-
-                <a href="#" class="btn btn-primary btn-block"><b>Follow</b></a>
-              </div>
-              <!-- /.card-body -->
-            </div>
-<section class="content">
+          <div class="box-body text-center">
+              <h1>Selamat Datang Admin</h1>
+              <h2>Semangat Untuk Hari Ini:)</h2>
+              <h3>
+              <br><br>
+          </div>
+  <section class="content">
       <div class="container-fluid">
-        <div class="bg-success p-2">
-        <a>Selamat Datang Admin, Semangat Untuk Hari Ini:)</a>
-        </div>
-        <br>
-        <div class="bg-danger p-2 mb-3">
-          <a>Ringkasan Sistem</a>
+        <div class="bg-warning p-2 mb-3">
+          <b>Ringkasan Sistem</b>
         </div>
         <div class="row">
           <div class="col-lg-3 col-6">
@@ -78,6 +51,18 @@
                 <i class="ion ion-person-add"></i>
               </div>
               <a href="/member" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+          </div>
+          <div class="col-lg-3 col-6">
+            <div class="small-box bg-teal">
+              <div class="inner">
+                <h3>Pengguna</h3>
+                <p>Tambah Data</p>
+              </div>
+              <div class="icon">
+                <i class="ion ion-person-add"></i>
+              </div>
+              <a href="/user" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
           <div class="col-lg-3 col-6">

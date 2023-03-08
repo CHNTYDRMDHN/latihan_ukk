@@ -97,12 +97,14 @@
             </a>
           </li> -->
           <br>
-         
-            <li class="nav-item">
-                <a href="{{ route('logout.admin') }}" class="nav-link">
-                  <i class="nav icon fas fa-sign-out-alt"> Logout </i>
-                </a>
-              </li>
+          <li class="nav-item">
+          <a href="{{ route('logout.admin')}}"class="nav-link">
+              <i class="nav-icon fas fa-sign-in-alt"></i>
+              <p>
+                LOGOUT
+              </p>
+            </a>
+          </li>
           </li>
         </ul>
       </nav>

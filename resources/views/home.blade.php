@@ -88,9 +88,9 @@
                         <div class="row">
                             <div class="col-xl-7 col-lg-9 col-md-10 col-sm-9">
                                 <div class="hero__caption">
-                                    <h1 data-animation="fadeInLeft" data-delay="0.7s">WELCOME TO LAUNDRY</h1>
-                                    <p data-animation="fadeInLeft" data-delay="0.4s">We take care about cleenness of your cloth</p>
-                                    <a href="/login" class="btn hero-btn" data-animation="fadeInLeft" data-delay="0.7s">Login</a>
+                                    <h1 data-animation="fadeInLeft" data-delay="0.7s" class="text-warning">WELCOME TO LAUNDRY</h1>
+                                    <p data-animation="fadeInLeft" data-delay="0.4s"  class="text-warning">We take care about cleenness of your cloth</p>
+                                    <a href="{{ route ('login.proses') }}" class="btn hero-btn" data-animation="fadeInLeft" data-delay="0.7s">Login</a>
                                 </div>
                             </div>
                         </div>

@@ -16,7 +16,7 @@
               @method('PUT') 
               <div class="card-body">
                 <div class="form-group">
-                    <label for="inputalamat">Id Outlet</label>
+                    <label for="inputalamat">Outlet Id</label>
                     <input type="text" name="outlet_id" class="form-control" id="inputoutlet_id" value="{{ $paket->outlet_id }}">
                 </div>
               

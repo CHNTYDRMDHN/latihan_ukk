@@ -19,7 +19,7 @@
     </div>
     <!-- /.card-header -->
     <div class="card-body">
-        <a href="transaksi/create" class="btn btn-danger">
+        <a href="transaksi/create" class="btn btn-danger mb-3">
           <i class="fas fa-plus"></i>
            Tambah
         </a>

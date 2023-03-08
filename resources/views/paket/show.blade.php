@@ -15,7 +15,7 @@
                 @csrf
                 <div class="card-body">
                   <div class="form-group">
-                    <label for="inputNIS">Id Outlet</label>
+                    <label for="inputNIS"> Outlet id</label>
                     <input type="text" name="outlet_id" class="form-control" id="inputNIS" placeholder="Enter Nama Induk Siswa" value="{{ $paket->outlet_id }}" disabled  >
                   </div>
 

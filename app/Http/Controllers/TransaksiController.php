@@ -24,7 +24,7 @@ class TransaksiController extends Controller
         //
         $transaksi    =  Transaksi::all();
         $members      =  Member::all();
-        $pakets       =  Paket::all()->where('otlet_id', Auth()->user()->outlet_id);
+        $pakets       =  Paket::all()->where('outlet_id', Auth()->user()->outlet_id);
         $outlets      =  Outlet::all();
         $users        =  User::all();
         return view('transaksi.index',compact('members','pakets','transaksi','outlets','users'));

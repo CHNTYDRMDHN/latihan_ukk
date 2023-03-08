@@ -52,7 +52,7 @@
             <select name="id_member" id="id_member" class="form-control">
               <option selected disabled>--Pilih Data Member--</option>
               @forelse ($members as $member)
-                <option value="{{ $member->id }}">{{ $member->nama }}</option>                  
+                <option value="{{ $member->id }}">{{ $member->nama.  '  |  '. $member->alamat }}</option>                  
               @empty
                 <option selected disabled>Tidak Ada Paket Tersedia</option>
               @endforelse
@@ -60,6 +60,7 @@
           </div>
         </div>
     </div>
+    
   </div>
 </div>
 

@@ -67,13 +67,6 @@
         @endforelse
       </table>
     </div>
-
-            <div class="card-footer">
-              <a href="/dashboard/admin" class="btn btn-warning">
-                <i class=" fas fa-solid fa-arrow-left"></i>
-                Back To Dashboard
-              </a>
-            </div>
   
 @endsection
 
