@@ -12,4 +12,8 @@ class Member extends Model
     protected $fillable = [
         'id','nama','alamat','jenis_kelamin','tlp'
     ];
+    public function transaksi()
+    {
+        return $this->belongsTo('App\Models\Transaksi', 'transaksi');
+    }
 }

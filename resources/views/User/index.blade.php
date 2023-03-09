@@ -40,10 +40,10 @@
                   <i class="fas fa-info-circle"></i>
                 Detail
                 </a>
-                <a class="btn btn-warning mr-3" href="{{route('user.edit', $user->id)}}">
+                <!-- <a class="btn btn-warning mr-3" href="{{route('user.edit', $user->id)}}">
                   <i class="fas fa-edit"></i>
                   Edit
-                </a>
+                </a> -->
                 @csrf
                 @method('DELETE')
                 <input type="submit" class="btn btn-danger" value="Delete">

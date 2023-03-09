@@ -1,7 +1,7 @@
 @extends('template.master')
 
 @section('judul')
- <h1> Ini Halaman Create Transaksi </h1>
+ <h1> Halaman Transaksi</h1>
 @endsection
 
 @section('content')    
@@ -19,48 +19,34 @@
     </div>
     <!-- /.card-header -->
     <div class="card-body">
-        <a href="transaksi/create" class="btn btn-danger mb-3">
+        <!-- <a href="transaksi/create" class="btn btn-primary mb-3">
           <i class="fas fa-plus"></i>
            Tambah
-        </a>
+        </a> -->
       <table id="example2" class="table table-bordered table-hover">
         <thead>
     <tr>
         <td class="td1">No</td>
-        <td class="td5">Outlet Id</td>
+        <td class="td5">Nama Outlet</td>
+        <td class="td3">Nama Member</td>
         <td class="td3">Kode Invoice</td>
-        <td class="td2">Tanggal</td>
+        <td class="td3">Tanggal</td>
         <td class="td4">Status</td>
         <td class="td4">Dibayar</td>
-        <td class="td4">Action</td>
+        <td class="td4">Harga</td>
     </tr>
         </thead>
         <tbody>
             <tr>
           @forelse($transaksi as $transaksi)
           <th class="th1">{{ $loop->iteration}}</th>
-            <td class="th2">{{ $transaksi->outlet_id }}</td>
-            <td class="th3">{{ $transaksi->kode_invoice }}</td>
+            <td class="th2">{{ $transaksi->outlet->nama}}</td>
+            <td class="th3">{{ $transaksi->member->nama }}</td>
+            <td class="th2">{{ $transaksi->kode_invoice}}</td>
             <td class="th2">{{ $transaksi->tgl}}</td>
             <td class="th2">{{ $transaksi->status}}</td>
             <td class="th2">{{ $transaksi->dibayar}}</td>
-            <td class="th4">
-          <form action="{{ route ('transaksi.destroy', [$transaksi->id])}}" method="POST">
-              <a class="btn btn-info mr-3" href="transaksi/{{$transaksi->id}}">
-                <i class="fas fa-info-circle"></i>
-                Detail
-              </a>
-              <a class="btn btn-warning mr-3" href="transaksi/{{$transaksi->id}}/edit">
-              <i class="far fa-edit"></i> 
-              Edit
-              </a>
-            @csrf
-            @method('DELETE')
-           <button type="submit" class="btn btn-danger" value="Delete">
-           <i class="fas fa-solid fa-trash"></i>
-            Delete
-           </button>
-          </form>
+            <td class="th2">{{ $transaksi->harga}}</td>
             </td>
          </tr>
          @empty

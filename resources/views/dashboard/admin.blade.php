@@ -1,17 +1,14 @@
 @extends('template.master')
 
-@section('judul')
-<h1>Dashboard</h1>
-@endsection
 
 @section('content')
           <div class="box-body text-center">
               <h1>Selamat Datang Admin</h1>
               <h2>Semangat Untuk Hari Ini:)</h2>
               <h3>
-              <br><br>
           </div>
-  <section class="content">
+          
+  <!-- <section class="content">
       <div class="container-fluid">
         <div class="bg-warning p-2 mb-3">
           <b>Ringkasan Sistem</b>
@@ -77,6 +74,6 @@
               <a href="/transaksi" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
-    </section>
+    </section> -->
 
     @endsection

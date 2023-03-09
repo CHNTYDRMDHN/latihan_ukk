@@ -16,7 +16,7 @@ class DetailTransaksiController extends Controller
     public function index()
     {
         //
-        $detailTransaksi    =   Detail_transaksi::all();
+        $detailTransaksi    = Detail_transaksi::all();
         $transaksi          = Transaksi::all();
         $paket              = Paket::all();
         return view('detail_transaksi.index', compact('detailTransaksi', 'transaksi', 'paket'));

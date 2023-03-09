@@ -32,6 +32,7 @@
       <!-- Sidebar Menu -->
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+        @if (auth()->user()->role == 'admin')
           <li class="nav-item">
             <a href="/dashboard/admin" class="nav-link">
               <i class="nav-icon fas fa-sharp fa-solid fa-user-tie"></i>
@@ -40,24 +41,7 @@
               </p>
             </a>
           </li>
-          <li class="nav-item">
-            <a href="/dashboard/kasir" class="nav-link">
-              <i class="nav-icon fas fa-sharp fa-solid fa-user-tie"></i>
-              <p>
-                Kasir
-              </p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="/dashboard/owner" class="nav-link">
-              <i class="nav-icon fas fa-sharp fa-solid fa-user-tie"></i>
-              <p>
-                Owner
-              </p>
-            </a>
-          </li>
-        
-          <!-- <li class="nav-header">WILAYAH OUTLET NICH</li>
+          <li class="nav-header">WILAYAH ADMIN NICH</li>
           <li class="nav-item">
             <a href="/outlet" class="nav-link">
               <i class="nav-icon far fa-building"></i>
@@ -66,7 +50,6 @@
               </p>
             </a>
           </li>
-
           <li class="nav-header">WILAYAH PAKET NICH</li>
           <li class="nav-item">
             <a href="/paket" class="nav-link">
@@ -76,7 +59,6 @@
               </p>
             </a>
           </li>
-
           <li class="nav-header">WILAYAH MEMBER NICH</li>
           <li class="nav-item">
             <a href="/member" class="nav-link">
@@ -86,7 +68,6 @@
               </p>
             </a>
           </li>
-
           <li class="nav-header">WILAYAH TRANSAKSI NICH</li>
           <li class="nav-item">
             <a href="/transaksi" class="nav-link">
@@ -95,8 +76,37 @@
                 Transaksi
               </p>
             </a>
-          </li> -->
-          <br>
+          </li> 
+          <li class="nav-header">WILAYAH USER NICH</li>
+          <li class="nav-item">
+            <a href="/user" class="nav-link">
+            <i class="nav-icon fas fa-user"></i>
+              <p>
+                Pengguna
+              </p>
+            </a>
+          </li> 
+      @endif
+      @if (auth()->user()->role == 'kasir')
+          <li class="nav-item">
+            <a href="/dashboard/kasir" class="nav-link">
+              <i class="nav-icon fas fa-sharp fa-solid fa-user-tie"></i>
+              <p>
+                Kasir
+              </p>
+            </a>
+          </li>
+     @endif
+     @if (auth()->user()->role == 'owner')
+          <li class="nav-item">
+            <a href="/dashboard/owner" class="nav-link">
+              <i class="nav-icon fas fa-sharp fa-solid fa-user-tie"></i>
+              <p>
+                Owner
+              </p>
+            </a>
+          </li>
+          @endif
           <li class="nav-item">
           <a href="{{ route('logout.admin')}}"class="nav-link">
               <i class="nav-icon fas fa-sign-in-alt"></i>

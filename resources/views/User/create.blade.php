@@ -31,7 +31,8 @@
           </div>
           <div class="form-group">
           <label>Outlet</label>
-          <select class="form-select" aria-label="Default select example" name="outlets_id" >
+          <br>
+          <select class="form-control" aria-label="Default select example" name="outlet_id" >
             <option selected>Open this select menu</option>
             @foreach ($outlet as $item)
             <option value="{{ $item->id}}">{{ $item->id }}</option>
@@ -40,15 +41,14 @@
           </div>
           <div class="form-group">
         <label for="">Pilih roles</label>
-          <select class="form-select" name="role" id="role">
+        <br>
+          <select class="form-control" name="role" id="role">
             <option selected>Pilih role</option>
             <option value="admin">admin</option>
             <option value="kasir">kasir</option>
             <option value="owner">owner</option>
           </select>
           </div>
-            
-          
           <div class="row">
             <div class="col-md-6 d-flex justify-content-start">
               <button type="submit" class="btn btn-primary">Submit</button> 
