@@ -23,14 +23,14 @@ class UserController extends Controller
     public function home()
     {
         //
-        return view('home');
+        return view('welcome');
     }
 
     public function sidebar()
     {
         //
         $users = user::all();
-        return view('home', compact('users'));
+        return view('welcome', compact('users'));
     }
 
     /**
@@ -54,7 +54,7 @@ class UserController extends Controller
     public function store(Request $request)
     {
         //
-        $request->validate([
+        $data = $request->validate([
             'nama' => 'required',
             'username' => 'required',
             'password' => 'required',
@@ -62,10 +62,10 @@ class UserController extends Controller
             'outlet_id' => 'required',
         ]);
             User::create([
-                'nama' => $request->nama,
-                'username' => $request->username,
-                'password' => bcrypt('password'),
-                'role' => $request->role,
+                'nama' => ($data['nama']),
+                'username' => ($data['username']),
+                'password' => bcrypt($data['password']),
+                'role' => ($data['role']),
                 'outlet_id' => $request->outlet_id,
             ]);
             return redirect()->route('user.index');
@@ -114,14 +114,13 @@ class UserController extends Controller
             'role' => 'required',
             'outlet_id' => 'required',
         ]);
-            User::create([
-                'nama' => $request->nama,
-                'username' => $request->username,
-                'password' => bcrypt('password'),
-                'role' => $request->role,
-                'outlet_id' => $request->outlet_id,
-            ]);
-            return redirect()->route('user.index');
+        $users = User::find($user->id);
+        $users->nama = $request->nama;
+        $users->username = $request->username;
+        $users->password = $request->password;
+        $users->role = $request->role;
+        $users->update();
+        return redirect('/user');
     }
 
     /**

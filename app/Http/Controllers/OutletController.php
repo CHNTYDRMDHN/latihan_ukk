@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Outlet;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class OutletController extends Controller

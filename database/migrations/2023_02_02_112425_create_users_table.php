@@ -17,10 +17,9 @@ class CreateUsersTable extends Migration
             $table->id();
             $table->string('nama', 100);
             $table->string('username')->unique();
-            // $table->timestamp('email_verified_at')->nullable();
             $table->text('password');
             $table->enum('role', ['admin', 'kasir', 'owner']);
-            $table->foreignId('outlet_id')->constrained('outlets');
+            $table->foreignId('outlet_id')->constrained('outlets')->onDelete('cascade');
             $table->rememberToken();
             $table->timestamps();
         });

@@ -51,9 +51,13 @@ Route::resource('user', UserController::class)->middleware('auth','role:admin');
 
 
 Route::middleware(['auth', 'role:kasir'])->group(function(){
+    Route::get('transaksi/', [DetailTransaksiController::class, 'index'])->name('transaksi.index');
     Route::post('transaksi/baru', [TransaksiController::class, 'create'])->name('transaksi.baru');
     Route::get('transaksi/{transaksi}', [TransaksiController::class, 'edit'])->name('transaksi.proses');
     Route::post('transaksi/simpan', [TransaksiController::class, 'store'])->name('transaksi.store');
-    Route::post('transaksi/{id}/detail', [DetailTransaksiController::class, 'store'])->name('transaksi.detail.store');
-    // Route::post('transaksi/', [TransaksiController::class, 'index'])->name('transaksi.index');
+    Route::post('transaksi/{transaksi}/detail', [DetailTransaksiController::class, 'store'])->name('transaksi.detail.store');
+    Route::patch('transaksi/{transaksi}/update-status',[DetailTransaksiController::class,'updateStatus'])->name('transaksi.updateStatus');
+    Route::get('transaksi/{transaksi}/invoice', [DetailTransaksiController::class, 'invoice'])->name('transaksi.invoice');
+    Route::put('/update-status/{transaksi}', [DetailTransaksiController::class,'updateStatus'])->name('updateStatus');
+    Route::put('transaksi/updateStatus/{transaksi}', [TransaksiController::class,'updateStatus'])->name('updateStatus');
 });

@@ -25,6 +25,16 @@ class User extends Authenticatable
         'outlet_id',
 
     ];
+    public function outlet()
+    {
+        return $this->hasOne('App\Models\Outlet','outlet_id');
+    }
+    public function transaksi()
+    {
+        return $this->belongsTo('App\Models\Transaksi','transaksi_id')->onDelete(function ($transaksi){
+            $transaksi->delete();
+        });
+    }
 
     /**
      * The attributes that should be hidden for serialization.
